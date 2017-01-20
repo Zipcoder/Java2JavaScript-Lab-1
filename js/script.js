@@ -2,98 +2,146 @@
 
 var display = document.getElementById("display");
 
-function oneToTen(){
-  display.innerHTML = "oneToTen()<br>***Output***<br>"
-  for (var i = 1; i <= 10; i++) {
-    display.innerHTML += i+'<br>'
+
+
+class Print {
+  constructor(){
+    this.container = ""
   }
+
+  clearContainer(){
+    this.container = ""
+    return this
+  }
+  createTitle(title){
+    this.container += title+"<br>***Output***<br>"
+    return this
+  }
+
+  add(content){
+    this.container += content
+    return this
+  }
+
+  addBreak(){
+    this.container +="<br>"
+    return this
+  }
+
+  getDetails(){
+    return this.container
+  }
+
+}
+
+var print = new Print()
+
+function oneToTen(){
+  print.clearContainer().createTitle("oneToTen()")
+  for (var i = 1; i <= 10; i++) {
+    print.add(i).addBreak()
+  }
+  display.innerHTML = print.getDetails()
 }
 
 function oddNumbers(){
-  display.innerHTML = "oddNumbers()<br>***Output***<br>"
+  print.clearContainer()
+  print.createTitle("oddNumbers()")
   for (var i = 1; i < 20; i+=2) {
-    display.innerHTML += i+'<br>'
+    print.add(i).addBreak()
   }
+  display.innerHTML = print.getDetails()
 }
+
 
 function squares(){
-  display.innerHTML = "squares()<br>***Output***<br>"
+  print.clearContainer()
+  print.createTitle("squares()")
   for (var i = 1; i*i <= 100; i++) {
-    display.innerHTML += (i*i)+'<br>'
+    print.add(i*i).addBreak()
   }
-}
-
-function oneToTen(){
-  display.innerHTML = "oneToTen()<br>***Output***<br>"
-  for (var i = 1; i <= 10; i++) {
-    display.innerHTML += i+'<br>'
-  }
+  display.innerHTML = print.getDetails()
 }
 
 function random4(){
-  display.innerHTML = "random4()<br>***Output***<br>"
+  print.clearContainer()
+  print.createTitle("random4()")
   for (var i = 1; i <= 4; i++) {
-    display.innerHTML += Math.floor(Math.random() * 100) + 1  +'<br>'
+    print.add(Math.floor(Math.random() * 100) + 1).addBreak()
   }
+  display.innerHTML = print.getDetails()
 }
 
+
 function even(n){
-  display.innerHTML = "even()<br>***Output***<br>"
+  print.clearContainer()
+  print.createTitle("even()")
   for (var i = 2; i < n; i+=2) {
-    display.innerHTML += i +'<br>'
+    print.add(i).addBreak()
   }
+  display.innerHTML= print.getDetails()
 }
 
 function powers(n){
-  display.innerHTML = "powers("+n+")<br>***Output***<br>"
+  print.clearContainer()
+  print.createTitle("powers("+n+")")
   for (var i = 1; i <= n; i++) {
-    display.innerHTML += Math.pow(2,i) + '<br>'
+    print.add(Math.pow(2,i)).addBreak()
   }
+  display.innerHTML = print.getDetails()
 }
 
 function areWeThereYet(){
+  print.clearContainer()
   do{
-    display.innerHTML += "Arewethereyet?<br>"
+    print.add("Arewethereyet?").addBreak()
     answer = prompt("Are we there yet?", "Well are we?")
-    display.innerHTML += answer + '<br>'
+    print.add(answer).addBreak()
   } while(answer!=="Yes")
-  display.innerHTML += "Good!"
+  print.add("Good!")
+  display.innerHTML = print.getDetails()
 }
 
 function triangle(){
-  display.innerHTML = "triangle()<br>***Output***<br>"
+  print.clearContainer()
+  print.createTitle("triangle()")
   for (var i = 0; i < 5; i++) {
     for (var j = 0; j <= i; j++){
-       display.innerHTML += "*"
+       print.add("*")
     }
-      display.innerHTML +=  "<br>"
+      print.addBreak()
   }
+  display.innerHTML = print.getDetails()
 }
 
 function tableSquare(){
-  display.innerHTML = "tableSquare()<br>***Output***<br>A4x4tablesquare<br>"
+  print.clearContainer()
+  print.createTitle("tableSquare()").add("A4x4tablesquare").addBreak()
   for (var i = 1; i <= 4; i++) {
     for (var j = 1; j <= 4; j++){
       if ((i*j)<10){
-        display.innerHTML += "|&nbsp&nbsp"+(i*j)
+        print.add("|&nbsp&nbsp"+(i*j))
       } else {
-        display.innerHTML += "|"+(i*j)
+        print.add("|"+(i*j))
       }
     }
-      display.innerHTML +=  "|<br>"
+      print.add("|").addBreak()
   }
+  display.innerHTML = print.getDetails()
 }
 
 function tableSquares(n){
-  display.innerHTML = "tableSquare()<br>***Output***<br>A"+n+"x"+n+"tablesquare<br>"
+  print.clearContainer()
+  print.createTitle("tableSquare()").add("A"+n+"x"+n+"tablesquare").addBreak()
   for (var i = 1; i <= n; i++) {
     for (var j = 1; j <= n; j++){
       if ((i*j)<10){
-        display.innerHTML += "|&nbsp&nbsp"+(i*j)
+        print.add("|&nbsp&nbsp"+(i*j))
       } else {
-        display.innerHTML += "|"+(i*j)
+        print.add("|"+(i*j))
       }
     }
-      display.innerHTML +=  "|<br>"
+      print.add("|").addBreak()
   }
+  display.innerHTML = print.getDetails()
 }
