@@ -89,7 +89,7 @@ function tableSquare(){
 
             for(j = 1; j <=4; j++){
 
-                display.innerHTML =  display.innerHTML + " " + j * i + " |";
+                j*i >= 10?  display.innerHTML =  display.innerHTML + " " + j * i + " |" : display.innerHTML =  display.innerHTML +  " \u00A0" + j * i + "\u00A0 |";
             }
             display.innerHTML =  display.innerHTML + "<br/>"
         }
@@ -103,7 +103,7 @@ function bigTable(){
 
             for(j = 1; j <=6; j++){
 
-                display.innerHTML =  display.innerHTML + " " + j * i + " |";
+                j*i >= 10?  display.innerHTML =  display.innerHTML + " " + j * i + " |" : display.innerHTML =  display.innerHTML +  " \u00A0" + j * i + "\u00A0 |";
             }
             display.innerHTML =  display.innerHTML + "<br/>"
         }
