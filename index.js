@@ -6,6 +6,7 @@ import { squareNumbers } from './js/squareNumbers'
 import { evenNumbers } from './js/evenNumbers'
 import { powerOfTwo } from './js/powersOfTwo'
 import { triangle } from './js/triangle'
+import { tableSquare } from './js/tableSquare'
 
 function main () {
   // Loops
@@ -31,6 +32,10 @@ function main () {
   // Triangle
   console.log('\nTriangle')
   triangle()
+
+  // Table Squares
+  console.log('\nTable Squares')
+  tableSquare()
 }
 
 main()
