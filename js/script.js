@@ -58,14 +58,10 @@ display.innerHTML="Good!";
 }
 
 function triangle(){
-  var filledString="triangle()<br>***Output***";
-  for(var i=1;i<=6;i++){
-    for(var j=1;j<i;j++){
-      filledString+=("*");
-    }
-    if(i<6){
-      filledString+=("<br>");
+  var star="";
+  display.innerHTML="triangle()<br>***Output***";
+  for(var i=0;i<5;i++){
+      star+="*";
+      display.innerHTML+="<br>"+ star;
     }
   }
-  display.innerHTML=filledString;
-}
