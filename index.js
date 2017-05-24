@@ -4,6 +4,8 @@ import { loops } from './js/loops'
 import { oddNumbers } from './js/oddNumbers'
 import { squareNumbers } from './js/squareNumbers'
 import { evenNumbers } from './js/evenNumbers'
+import { powerOfTwo } from './js/powersOfTwo'
+import { triangle } from './js/triangle'
 
 function main () {
   // Loops
@@ -21,6 +23,14 @@ function main () {
   // Odd Numbers
   console.log('\nEvenNumbers')
   evenNumbers(20)
+
+  // Odd Numbers
+  console.log('\nPowers of Two')
+  powerOfTwo(8)
+
+  // Triangle
+  console.log('\nTriangle')
+  triangle()
 }
 
 main()
