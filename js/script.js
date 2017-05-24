@@ -103,7 +103,7 @@ function tableSquare()
   }
 }
 
-function tableSquare(num)
+function tableSquares(num)
 {
   display.innerHTML= "***Output**<br>A"+num+"x"+num+"tablesquare<br>";
  for(i = 1; i < num+1; i++)
