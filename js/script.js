@@ -101,10 +101,36 @@ function tableSquare() {
     
     var result = "";
     var index = 1;
+    
     for (var i = 1; i<=4; i++) {
         var line = "<p>";
         for (var j = 0; j<4; j++) {
-            line += "|" + index + "|";
+            if (index < 10) {
+                line += "|" + " " +index + "|";
+            } else {
+                line += "|" + index + "|";
+            }
+            index++;
+        }
+        line += "</p>";
+        result += line;
+    }
+    display.innerHTML = result;
+}
+
+function tableSquares(n) {
+    
+    var result = "";
+    var index = 1;
+    
+    for (var i = 1; i<=n; i++) {
+        var line = "<p>";
+        for (var j = 0; j<n; j++) {
+            if (index < 10) {
+                line += "|" + " " +index + "|";
+            } else {
+                line += "|" + index + "|";
+            }
             index++;
         }
         line += "</p>";
