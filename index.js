@@ -1,7 +1,9 @@
 'use strict'
+
 import { loops } from './js/loops'
 import { oddNumbers } from './js/oddNumbers'
 import { squareNumbers } from './js/squareNumbers'
+import { evenNumbers } from './js/evenNumbers'
 
 function main () {
   // Loops
@@ -15,6 +17,10 @@ function main () {
   // Odd Numbers
   console.log('\nSquare Numbers')
   squareNumbers()
+
+  // Odd Numbers
+  console.log('\nEvenNumbers')
+  evenNumbers(20)
 }
 
 main()
