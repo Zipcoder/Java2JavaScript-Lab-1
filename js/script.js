@@ -58,7 +58,15 @@ function powers(n) {
 }
 
 function areWeThereYet() {
-	//stubbed
+	var retString = ""
+	var answer = ""
+	while(answer !== "Yes") {
+		retString += "Arewethereyet?<br />"
+		answer = prompt("Arewethereyet?")
+		retString += answer + "<br />"
+	}
+	retString += "Good!"
+	display.innerHTML = retString
 }
 
 function triangle() {
