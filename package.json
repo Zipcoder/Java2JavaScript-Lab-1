@@ -1,0 +1,30 @@
+{
+  "name": "javascript-lab-1",
+  "version": "1.0.0",
+  "description": "Convert Java lab to JavaScript #1",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-es2015-node5": "*",
+    "babel-preset-stage-3": "*",
+    "babel-register": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zipcoder/Java2JavaScript-Lab-1.git"
+  },
+  "keywords": [
+    "lab"
+  ],
+  "author": "ZipCoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zipcoder/Java2JavaScript-Lab-1/issues"
+  },
+  "homepage": "https://github.com/Zipcoder/Java2JavaScript-Lab-1#readme"
+}
