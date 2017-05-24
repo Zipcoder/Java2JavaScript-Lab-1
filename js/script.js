@@ -49,3 +49,43 @@ function even (number) {
   }
   display.innerHTML = returnedString;
 }
+
+function powers (number) {
+  var returnedString = "";
+  for (var i = 1; i < number+1; i++) {
+    returnedString += "<div>" + Math.pow(2, i) + "<div>";
+  }
+  display.innerHTML = returnedString;
+}
+
+function areWeThereYet () {
+  var returnedString = "";
+  while (returnedString !== "Yes") {
+    returnedString = prompt("Are we there yet?");
+  }
+  display.innerHTML = returnedString;
+}
+
+function triangle () {
+  var returnedString = "";
+  for (i = 1; i < 6; i++) {
+    var lineString = "";
+    for (j = 1; j <= i; j++) {
+      lineString += "*";
+    }
+    returnedString += "<p>" + lineString + "</p>";
+  }
+  display.innerHTML = returnedString;
+}
+
+function tableSquares (number) {
+  var returnedString = "";
+  for (i = 1; i <= number; i++) {
+    var lineString = "";
+    for (j = 1; j <= number; j++) {
+      lineString += ("|" + (i*j) + "|");
+    }
+    returnedString += "<p>" + lineString + "</p>";
+  }
+  display.innerHTML = returnedString;
+}
