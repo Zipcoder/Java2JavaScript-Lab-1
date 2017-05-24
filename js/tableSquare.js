@@ -1,12 +1,12 @@
 'use strict'
 
-export function tableSquare () {
-  for (let i = 1; i <= 4; i++) {
+export function tableSquare (n) {
+  for (let i = 1; i <= n; i++) {
     let column = ''
-    for (let k = i; k <= i * 4; k += i) {
-      column += ('| ' + k)
+    for (let k = i; k <= i * n; k += i) {
+      column += (' | ' + k)
     }
-    column += '|'
+    column += ' | '
     console.log(column)
   }
 }

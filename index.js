@@ -35,7 +35,7 @@ function main () {
 
   // Table Squares
   console.log('\nTable Squares')
-  tableSquare()
+  tableSquare(6)
 }
 
 main()
