@@ -65,3 +65,47 @@ function triangle(){
       display.innerHTML+="<br>"+ star;
     }
   }
+
+  function tableSquare(){
+    display.innerHTML="tableSquare()<br>***Output***<br>";
+    var filledTable="";
+    for(var i=1;i<=4;i++){
+      filledTable+="<br>"
+
+      for (var j=1;j<4;j++){
+      filledTable+="|";
+      var multiple= i*j;
+      if (multiple<=9){
+        filledTable+= "\xa0"+multiple+ " \xa0 ";
+      }
+      else if(multiple>=10){
+        filledTable+= " " +multiple + " ";
+      }
+    }
+    filledTable+="|";
+
+  }
+  display.innerHTML+=filledTable;
+}
+
+function tableSquares(n){
+  display.innerHTML="tableSquare()<br>***Output***<br>";
+  var filledTable="";
+  for(var i=1;i<=n;i++){
+    filledTable+="<br>"
+
+    for (var j=1;j<=n;j++){
+    filledTable+="|";
+    var multiple= i*j;
+    if (multiple<=9){
+      filledTable+= "\xa0 "+multiple+ "\xa0 "
+    }
+    else if(multiple>=10){
+      filledTable+= " " +multiple + " ";
+    }
+  }
+  filledTable+="|";
+
+}
+display.innerHTML+=filledTable;
+}
