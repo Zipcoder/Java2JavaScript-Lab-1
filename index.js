@@ -7,6 +7,7 @@ import { evenNumbers } from './js/evenNumbers'
 import { powerOfTwo } from './js/powersOfTwo'
 import { triangle } from './js/triangle'
 import { tableSquare } from './js/tableSquare'
+import { areWeThereYet } from './js/thereYet'
 
 function main () {
   // Loops
@@ -36,6 +37,10 @@ function main () {
   // Table Squares
   console.log('\nTable Squares')
   tableSquare(6)
+
+  // Are We There Yet
+  console.log('\nAre We There Yet')
+  areWeThereYet()
 }
 
 main()
