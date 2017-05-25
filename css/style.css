@@ -43,7 +43,7 @@ a:hover, a:active {
 
 .btn {
     display: inline-block;
-    padding: 6px 7px;}
+    padding: 6px .5px;}
 
 
 /* ===================================== HEADER STYLE ========================================= */

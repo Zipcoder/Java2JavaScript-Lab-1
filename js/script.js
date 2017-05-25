@@ -68,6 +68,17 @@ function powersOfTwo() {
     display.innerHTML = header + "<br>" + counter;
 }
 
+function arewethereyet() {
+    var answer = prompt("Are we there yet?");
+    var emptyString = "";
+    while (answer.toLowerCase() !== 'yes') {
+        answer = prompt("Are we there yet?");
+        emptyString += "Are we there yet?<br>" + answer + "<br>";
+    }
+    display.innerHTML = emptyString;
+
+}
+
 function triangle() {
     var header = "***Output***";
     var completedTriangle = "";
