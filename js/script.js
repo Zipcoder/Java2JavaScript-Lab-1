@@ -32,20 +32,11 @@ function squares() {
 }
 
 function random(){
-	var firstHeader = "random()"
-	var filledString = ""
-
-    for (var i = 1; i <= 4; i++) {
-    	var num = Math.floor((Math.random() * 100) + 1)
-			if (i < 4) {
-                filledString = filledString + toString(num) + '<br>'
-            } else {
-                filledString = filledString + toString(num)
-            }
-
-    	}
-		display.innerHTML = firstHeader + filledString
+	display.innerHTML += "random()"
+	for (var i = 1; i <= 4; i++) {
+    	display.innerHTML += "<br>" + Math.floor(Math.random()*(i*10))
 	}
+}
 
 function evenNumbers() {
 	var firstHeader = "evenNumbers()"
